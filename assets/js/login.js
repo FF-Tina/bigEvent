@@ -57,6 +57,8 @@ $(function(){
                   if(res.status !== 0){
                       return layer.msg(res.message)
                   }
+                //   登录成功后，将token保存到本地
+                localStorage.setItem('token',res.token)
                   layer.msg(res.message,function(){
                     location.href = '/home/index.html'
                   })

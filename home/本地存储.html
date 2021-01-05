@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" /><button class="localbtn">本地存储</button
+    ><button class="getbtn">获取</button> <button class="removebtn">删除</button
+    ><button class="clear">删除所有数据</button>
+    <script>
+      let ipt = document.querySelector("input");
+      localbtn = document.querySelector(".localbtn");
+      getbtn = document.querySelector(".getbtn");
+      removebtn = document.querySelector(".removebtn");
+      clear = document.querySelector(".clear");
+      //   在同源下可以共享 协议、同源、端口一致
+      localbtn.onclick = function () {
+        let str = ipt.value;
+        sessionStorage.setItem("name", str);
+      };
+      getbtn.onclick = function () {
+        sessionStorage.getItem("name");
+      };
+      removebtn.onclick = function () {
+        sessionStorage.removeItem("name");
+      };
+      clear.onclick = function () {
+        sessionStorage.clear();
+      };
+    </script>
+  </body>
+</html>

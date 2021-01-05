@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" /><button class="localbtn">本地存储</button
+    ><button class="getbtn">获取</button>
+    <script>
+      // 存复杂数据类型
+      let ipt = document.querySelector("input");
+      localbtn = document.querySelector(".localbtn");
+      getbtn = document.querySelector(".getbtn");
+      //   在同源下可以共享 协议、同源、端口一致
+      let data = [{ id: 1, name: "didi", age: 22 }];
+      localbtn.onclick = function () {
+        // 先让data转成字符串
+        let Jsonstr = JSON.stringify(data);
+        localStorage.setItem("data", Jsonstr);
+      };
+      getbtn.onclick = function () {
+        //   需要先进行parse解析 得到js进行操作
+        JSON.parse(data);
+        localStorage.getItem("data");
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+.layui-footer {
+  text-align: center;
+}
+.layui-body {
+  overflow: hidden;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+.layui-nav-img {
+  display: none;
+}
+.userarea {
+  width: 200px;
+  text-align: center;
+}
+.text-avatar {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background-color: pink;
+  border-radius: 50%;
+  text-align: center;
+}
