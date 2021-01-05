@@ -1,26 +1,36 @@
 .layui-footer {
   text-align: center;
 }
-.layui-body {
-  overflow: hidden;
-}
 iframe {
   width: 100%;
   height: 100%;
 }
-.layui-nav-img {
-  display: none;
-}
-.userarea {
-  width: 200px;
-  text-align: center;
+.layui-body {
+  overflow: hidden;
 }
 .text-avatar {
   display: inline-block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  background-color: pink;
+  width: 40px;
+  height: 40px;
+  background-color: #009688;
   border-radius: 50%;
   text-align: center;
+  line-height: 40px;
+  margin-right: 5px;
+}
+.userarea {
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+.layui-nav-img {
+  display: none;
+}
+.iconfont {
+  margin-right: 8px;
+}
+.layui-icon {
+  margin-right: 8px;
 }

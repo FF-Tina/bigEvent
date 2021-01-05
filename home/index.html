@@ -7,6 +7,12 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <title>layout 后台大布局 - Layui</title>
+    <script>
+      // let token = localStorage.setItem("token");
+      // if (!token) {
+      //   location.href = "/home/login.html";
+      // }
+    </script>
     <link rel="stylesheet" href="/assets/lib/layui/css/layui.css" />
     <link rel="stylesheet" href="/assets/css/index.css" />
     <link rel="stylesheet" href="/assets/fonts/iconfont.css" />
@@ -21,7 +27,7 @@
         <ul class="layui-nav layui-layout-right">
           <li class="layui-nav-item">
             <a href="javascript:;">
-              <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+              <img src="" class="layui-nav-img" />
               <span class="text-avatar">A</span>
               个人中心
             </a>
@@ -30,7 +36,9 @@
               <dd><a href="">安全设置</a></dd>
             </dl>
           </li>
-          <li class="layui-nav-item"><a href="">退出</a></li>
+          <li class="layui-nav-item">
+            <a href="javascript:;" id="logoutBtn">退出</a>
+          </li>
         </ul>
       </div>
 
@@ -38,8 +46,8 @@
         <div class="layui-side-scroll">
           <div class="userarea">
             <a href="javascript:;">
-              <span class="text-avatar">A</span>
-              <span>欢迎迪迪</span>
+              <span class="text-avatar" style="color: aliceblue">A</span>
+              <span id="welcome" style="color: aliceblue">欢迎迪迪</span>
             </a>
           </div>
           <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
@@ -49,73 +57,50 @@
             lay-filter="test"
           >
             <li class="layui-nav-item layui-this">
-              <a
-                href="/home/dashboard.html"
-                target="frbody"
-                class="iconfont icon-home"
-                >首页</a
+              <a href="/home/dashboard.html" target="frbody"
+                ><i class="iconfont icon-home"></i>首页</a
               >
             </li>
             <li class="layui-nav-item layui-nav-itemed">
-              <a class="iconfont icon-16" href="javascript:;">文章管理</a>
+              <a href="javascript:;">
+                <i class="iconfont icon-16"></i>文章管理</a
+              >
               <dl class="layui-nav-child">
                 <dd>
                   <a href="javascript:;"
-                    ><i
-                      class="layui-icon layui-icon-app"
-                      style="font-size: 30px; color: #1e9fff"
-                    ></i>
-                    文章类别</a
+                    ><i class="layui-icon layui-icon-app"></i> 文章类别</a
                   >
                 </dd>
                 <dd>
                   <a href="javascript:;"
-                    ><i
-                      class="layui-icon layui-icon-app"
-                      style="font-size: 30px; color: #1e9fff"
-                    ></i>
-                    文章列表</a
+                    ><i class="layui-icon layui-icon-app"></i> 文章列表</a
                   >
                 </dd>
                 <dd>
                   <a href="javascript:;"
-                    ><i
-                      class="layui-icon layui-icon-app"
-                      style="font-size: 30px; color: #1e9fff"
-                    ></i>
-                    发布文章</a
+                    ><i class="layui-icon layui-icon-app"></i> 发布文章</a
                   >
                 </dd>
               </dl>
             </li>
             <li class="layui-nav-item">
-              <a href="javascript:;" class="iconfont icon-user">个人中心</a>
+              <a href="javascript:;">
+                <i class="iconfont icon-user"></i> 个人中心</a
+              >
               <dl class="layui-nav-child">
                 <dd>
                   <a href="javascript:;"
-                    ><i
-                      class="layui-icon layui-icon-app"
-                      style="font-size: 30px; color: #1e9fff"
-                    ></i>
-                    基本资料</a
+                    ><i class="layui-icon layui-icon-app"></i> 基本资料</a
                   >
                 </dd>
                 <dd>
                   <a href="javascript:;"
-                    ><i
-                      class="layui-icon layui-icon-app"
-                      style="font-size: 30px; color: #1e9fff"
-                    ></i>
-                    更换头像</a
+                    ><i class="layui-icon layui-icon-app"></i> 更换头像</a
                   >
                 </dd>
                 <dd>
                   <a href="javascript:;"
-                    ><i
-                      class="layui-icon layui-icon-app"
-                      style="font-size: 30px; color: #1e9fff"
-                    ></i>
-                    重置密码</a
+                    ><i class="layui-icon layui-icon-app"></i> 重置密码</a
                   >
                 </dd>
               </dl>
@@ -125,9 +110,8 @@
       </div>
 
       <div class="layui-body">
-        <!-- 内容主体区域 -->
         <iframe
-          name="frbody"
+          name="frname"
           src="/home/dashboard.html"
           frameborder="0"
         ></iframe>
@@ -139,14 +123,16 @@
       </div>
     </div>
     <script src="/assets/lib/jquery.js"></script>
-    <script src="/assets/lib/layui/layui.js"></script>
-    <script src="/assets/js/index.js"></script>
+    <!-- <script src="/assets/lib/layui/layui.js"></script> -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
     <script src="/assets/js/Ajaxbase.js"></script>
+    <script src="/assets/js/index.js"></script>
+
     <script>
       //JavaScript代码区域
-      layui.use("element", function () {
-        var element = layui.element;
-      });
+      // layui.use("element", function () {
+      //   var element = layui.element;
+      // });
     </script>
   </body>
 </html>
