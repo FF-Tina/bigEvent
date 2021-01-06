@@ -10,6 +10,7 @@ iframe {
   overflow: hidden;
 }
 .text-avatar {
+  display: block;
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -26,12 +27,14 @@ iframe {
   text-align: center;
   border-bottom: 1px solid #000;
 }
-.layui-nav-img {
-  display: none;
-}
+
 .iconfont {
   margin-right: 8px;
 }
 .layui-icon {
   margin-right: 8px;
+}
+.layui-nav-img {
+  width: 40px;
+  height: 40px;
 }
