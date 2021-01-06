@@ -1,4 +1,5 @@
 // 获取用户头像和昵称
+// getUserInfo()必须是全局的，才可通过window找到
 getUserInfo()
 function getUserInfo(){
     $.ajax({
@@ -14,15 +15,14 @@ function getUserInfo(){
             }
             // 处理头像和昵称数据
             renderUserInfo(res.data)
-            console.log(res.data);
+            // console.log(res.data);
         },
-        
     })
     function renderUserInfo(data){
         // console.log(data);
         // console.log(data.user_pic);
         // 昵称优先于名称 运用与 找真值 找到了返回
-        console.log(data);
+        // console.log(data);
         let name = data.nickname || data.username
         // 文字设置
         let first = name[0].toUpperCase()
@@ -44,7 +44,7 @@ function getUserInfo(){
             //   });
             layer.confirm('确定删除吗？', {icon: 3, title:'提示'}, function(index){
                 //do something
-                console.log(index);               
+                // console.log(index);               
                 // 跳转到登录页面
                 // 将token清除
                 localStorage.removeItem('token')

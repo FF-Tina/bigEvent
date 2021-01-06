@@ -12,9 +12,9 @@ $.ajaxPrefilter(function(options){
             }
     }
     options.complete = function(xhr){
-        console.log(xhr);
+        // console.log(xhr);
         //请求完成（不论成功失败）
-        console.log(xhr.responseJSON);
+        // console.log(xhr.responseJSON);
         if(xhr.responseJSON.status === 1 && xhr.responseJSON.message === '身份认证失败！'){
             
             location.href = "/home/login.html";
